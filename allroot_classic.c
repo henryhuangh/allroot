@@ -15,36 +15,41 @@ int main()
 		scanf("%lf", &a[i]);
 		b[i]=d-i;
 	}
-	while (d!=0){
-		count=0;
-		while (1)
-		{
+	if(d==1){
+	printf("%lf\n",-a[1]/a[0]);
+	}
+	else{
+		while (d!=0){
+			count=0;
+			while (1)
+			{
+				r0=r;
+				yh=0;
+				for (i=0;i!=d+1;i++){
+					yh=yh+a[i]*pow(r,b[i]);
+				}
+				yb=0;
+				for (i=0;i!=d+1;i++){
+					yb=yb+a[i]*b[i]*pow(r,b[i]-1);
+				}
+				r=r-yh/yb;
+				count=count+1;
+				if (r<r0+0.000000000001&&r>r0-0.000000000001){
+					printf("%lf iteration:%d\n", r,count);
+					break;
+				}
+				if (count>99){
+					break;
+				}
+			}
+			d--;
+			if (count>99)break;
+			for (i=0;i!=d+1;i++)b[i]=d-i;
+			for (i=1;i!=d+1;i++){
+				a[i]=a[i]+a[i-1]*r;
+			}
 			r0=r;
-			yh=0;
-			for (i=0;i!=d+1;i++){
-				yh=yh+a[i]*pow(r,b[i]);
-			}
-			yb=0;
-			for (i=0;i!=d+1;i++){
-				yb=yb+a[i]*b[i]*pow(r,b[i]-1);
-			}
-			r=r-yh/yb;
-			count=count+1;
-			if (r<r0+0.000000000001&&r>r0-0.000000000001){
-				printf("%lf iteration:%d\n", r,count);
-				break;
-			}
-			if (count>99){
-				break;
-			}
 		}
-		d--;
-		if (count>99)break;
-		for (i=0;i!=d+1;i++)b[i]=d-i;
-		for (i=1;i!=d+1;i++){
-			a[i]=a[i]+a[i-1]*r;
-		}
-		r0=r;
 	}
 	return 0;
 }
