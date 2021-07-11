@@ -10,7 +10,8 @@ This code uses the Newton's method to zero in on the root, the answer is display
   
 ## Newton's Method
 
-$`x_{1} = x_{0} - \frac{f( x_{0} )}{f'( x_{0}) } `$
+x<sub>1</sub> = x<sub>0</sub> - f( x<sub>0</sub> ) / f'( x<sub>0</sub> )
+  
 ## Instructions
 1. Enter the degree of the polynomial is entered. This means the exponent of the highest variable of the polynomial and press the Enter key.
 2. Enter the coefficients of each variable exponent with the Enter key pressed after each coefficent is entered. If there is no coefficent to a corresponding exponent, enter 0.
