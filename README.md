@@ -18,6 +18,6 @@ x<sub>1</sub> = x<sub>0</sub> - f( x<sub>0</sub> ) / f'( x<sub>0</sub> )
 3. After all the coefficients are entered, the roots of the polynomial will be displayed below
   
 ### Example
-  y = 5x<sup>2</sup>+3x-2
+  y = 2x<sup>3</sup>+4x<sup>2</sup>-2
   
-  For this example, enter 2 for the exponent then 5, 3, and -2 for the coefficents
+  For this example, enter 3 for the exponent then 2, 4, 0 and -2 for the coefficents
